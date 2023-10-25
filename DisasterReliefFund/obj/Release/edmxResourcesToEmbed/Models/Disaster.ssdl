@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Disaster">
+    <Key>
+      <PropertyRef Name="DisasterID" />
+    </Key>
+    <Property Name="DisasterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Start Date" Type="date" />
+    <Property Name="End Date" Type="date" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="Aid Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GoodsDonations">
+    <Key>
+      <PropertyRef Name="GoodsDonorID" />
+    </Key>
+    <Property Name="GoodsDonorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Items" Type="int" />
+    <Property Name="DisasterID" Type="int" />
+    <Property Name="GoodsCategory" Type="varchar" MaxLength="50" />
+    <Property Name="GoodDescription" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MonetaryDonations">
+    <Key>
+      <PropertyRef Name="DisasterDonorID" />
+    </Key>
+    <Property Name="DisasterDonorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisasterID" Type="int" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__MonetaryD__Disas__36B12243">
+    <End Role="Disaster" Type="Self.Disaster" Multiplicity="1" />
+    <End Role="MonetaryDonations" Type="Self.MonetaryDonations" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Disaster">
+        <PropertyRef Name="DisasterID" />
+      </Principal>
+      <Dependent Role="MonetaryDonations">
+        <PropertyRef Name="DisasterDonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GoodsDonations_Disaster">
+    <End Role="Disaster" Type="Self.Disaster" Multiplicity="1" />
+    <End Role="GoodsDonations" Type="Self.GoodsDonations" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Disaster">
+        <PropertyRef Name="DisasterID" />
+      </Principal>
+      <Dependent Role="GoodsDonations">
+        <PropertyRef Name="GoodsDonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Disaster" EntityType="Self.Disaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GoodsDonations" EntityType="Self.GoodsDonations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonetaryDonations" EntityType="Self.MonetaryDonations" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__MonetaryD__Disas__36B12243" Association="Self.FK__MonetaryD__Disas__36B12243">
+      <End Role="Disaster" EntitySet="Disaster" />
+      <End Role="MonetaryDonations" EntitySet="MonetaryDonations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GoodsDonations_Disaster" Association="Self.FK_GoodsDonations_Disaster">
+      <End Role="Disaster" EntitySet="Disaster" />
+      <End Role="GoodsDonations" EntitySet="GoodsDonations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-DisasterReliefFund-20230921052000.mdf;Initial Catalog=aspnet-DisasterReliefFund-20230921052000;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator\\source\\repos\\DisasterReliefFund\\DisasterReliefFund\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Disaster_Relief_FoundationEntities-Web.config Connection String" description="Disaster_Relief_FoundationEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Disaster.csdl|res://*/Models.Disaster.ssdl|res://*/Models.Disaster.msl;provider=System.Data.SqlClient;provider connection string='data source=(localdb)\ProjectsV13;initial catalog=&quot;Disaster Relief Foundation&quot;;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework'" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator\\source\\repos\\DisasterReliefFund\\DisasterReliefFund\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Disaster_Relief_FoundationEntities']/@connectionString" />
+  </parameter>
+  <parameter name="Disaster_Relief_FoundationEntities1-Web.config Connection String" description="Disaster_Relief_FoundationEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Disaster.csdl|res://*/Models.Disaster.ssdl|res://*/Models.Disaster.msl;provider=System.Data.SqlClient;provider connection string='data source=(localdb)\ProjectsV13;initial catalog=&quot;Disaster Relief Foundation&quot;;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework'" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Administrator\\source\\repos\\DisasterReliefFund\\DisasterReliefFund\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Disaster_Relief_FoundationEntities1']/@connectionString" />
+  </parameter>
+</parameters>

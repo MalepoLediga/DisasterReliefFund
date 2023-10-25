@@ -1,0 +1,74 @@
+﻿@model DisasterReliefFund.Models.GoodsDonation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GoodsDonation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Items)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Items)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisasterID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisasterID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoodsCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoodsCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoodDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoodDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disaster.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disaster.Location)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GoodsDonorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
