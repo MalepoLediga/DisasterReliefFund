@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Disaster">
+    <Key>
+      <PropertyRef Name="DisasterID" />
+    </Key>
+    <Property Name="DisasterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Start_Date" Type="DateTime" Precision="0" />
+    <Property Name="End_Date" Type="DateTime" Precision="0" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aid_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MonetaryDonation" Relationship="Self.FK__MonetaryD__Disas__36B12243" FromRole="Disaster" ToRole="MonetaryDonations" />
+    <NavigationProperty Name="GoodsDonation" Relationship="Self.FK_GoodsDonations_Disaster" FromRole="Disaster" ToRole="GoodsDonations" />
+  </EntityType>
+  <EntityType Name="GoodsDonation">
+    <Key>
+      <PropertyRef Name="GoodsDonorID" />
+    </Key>
+    <Property Name="GoodsDonorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Items" Type="Int32" />
+    <Property Name="DisasterID" Type="Int32" />
+    <Property Name="GoodsCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GoodDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Disaster" Relationship="Self.FK_GoodsDonations_Disaster" FromRole="GoodsDonations" ToRole="Disaster" />
+  </EntityType>
+  <EntityType Name="MonetaryDonation">
+    <Key>
+      <PropertyRef Name="DisasterDonorID" />
+    </Key>
+    <Property Name="DisasterDonorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisasterID" Type="Int32" />
+    <Property Name="Amount" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Disaster" Relationship="Self.FK__MonetaryD__Disas__36B12243" FromRole="MonetaryDonations" ToRole="Disaster" />
+  </EntityType>
+  <Association Name="FK__MonetaryD__Disas__36B12243">
+    <End Role="Disaster" Type="Self.Disaster" Multiplicity="1" />
+    <End Role="MonetaryDonations" Type="Self.MonetaryDonation" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Disaster">
+        <PropertyRef Name="DisasterID" />
+      </Principal>
+      <Dependent Role="MonetaryDonations">
+        <PropertyRef Name="DisasterDonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GoodsDonations_Disaster">
+    <End Role="Disaster" Type="Self.Disaster" Multiplicity="1" />
+    <End Role="GoodsDonations" Type="Self.GoodsDonation" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Disaster">
+        <PropertyRef Name="DisasterID" />
+      </Principal>
+      <Dependent Role="GoodsDonations">
+        <PropertyRef Name="GoodsDonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Disaster_Relief_FoundationEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Disasters" EntityType="Self.Disaster" />
+    <EntitySet Name="GoodsDonations" EntityType="Self.GoodsDonation" />
+    <EntitySet Name="MonetaryDonations" EntityType="Self.MonetaryDonation" />
+    <AssociationSet Name="FK__MonetaryD__Disas__36B12243" Association="Self.FK__MonetaryD__Disas__36B12243">
+      <End Role="Disaster" EntitySet="Disasters" />
+      <End Role="MonetaryDonations" EntitySet="MonetaryDonations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GoodsDonations_Disaster" Association="Self.FK_GoodsDonations_Disaster">
+      <End Role="Disaster" EntitySet="Disasters" />
+      <End Role="GoodsDonations" EntitySet="GoodsDonations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

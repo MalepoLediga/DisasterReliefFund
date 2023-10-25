@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Disaster_Relief_FoundationEntities1">
+    <EntitySetMapping Name="Disasters">
+      <EntityTypeMapping TypeName="Model.Disaster">
+        <MappingFragment StoreEntitySet="Disaster">
+          <ScalarProperty Name="DisasterID" ColumnName="DisasterID" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End Date" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Aid_Type" ColumnName="Aid Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodsDonations">
+      <EntityTypeMapping TypeName="Model.GoodsDonation">
+        <MappingFragment StoreEntitySet="GoodsDonations">
+          <ScalarProperty Name="GoodsDonorID" ColumnName="GoodsDonorID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Items" ColumnName="Items" />
+          <ScalarProperty Name="DisasterID" ColumnName="DisasterID" />
+          <ScalarProperty Name="GoodsCategory" ColumnName="GoodsCategory" />
+          <ScalarProperty Name="GoodDescription" ColumnName="GoodDescription" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonetaryDonations">
+      <EntityTypeMapping TypeName="Model.MonetaryDonation">
+        <MappingFragment StoreEntitySet="MonetaryDonations">
+          <ScalarProperty Name="DisasterDonorID" ColumnName="DisasterDonorID" />
+          <ScalarProperty Name="DisasterID" ColumnName="DisasterID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

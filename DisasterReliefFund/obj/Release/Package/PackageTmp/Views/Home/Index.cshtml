@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="color:orange;">
+    <h1>Disaster Relief Foundation</h1>
+    <p   class="lead">As the Disaster Relief Foundation ,we aims to provide humanitarian assistance and support to communities and individuals affected by disasters, emergencies, and crises</p>
+    
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4" style="background-color: mediumpurple;">
+        <h2>GoodsDonation</h2>
+        <p>
+            These are the ways in which we wish to contribute goods in our community , anyone is welcome to 
+            donate goods that they might not have a use for and would like to share a bit of kindness
+            we accept all kinds of Goods from Clothing , non-perishable foods ..
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("List of Goods Donated", "Index", "GoodsDonations")></a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Money Donation</h2>
+        <p>Money Donations go a long way in assisting . it gives the foundation the power to go out and do more 
+           it allows us to really look into what we lack and get it for the people suffering these criseses 
+           we accept all amounts no amount is too small
+        </p>
+        <p><a class="btn btn-default" @Html.ActionLink("List of Amount Donated", "Index", "MonetaryDonations")> </a></p>
+    </div>
+    <div class="col-md-4" style="background-color: mediumpurple;">
+        <h2>Disasters</h2>
+        <p>Our donations don't just reach out to the disasters that we are aware of , these can be even for the 
+           disasters that a donor might know of and want to record the disaster on our system so that they can
+           record these events for others to record'</p>
+        <p><a class="btn btn-default" @Html.ActionLink("List of Disaster Occured", "Index", "Disasters")> </a></p>
+    </div>
+</div>

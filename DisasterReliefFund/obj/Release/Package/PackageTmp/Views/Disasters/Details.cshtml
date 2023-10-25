@@ -1,0 +1,66 @@
+﻿@model DisasterReliefFund.Models.Disaster
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Disaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Start_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Start_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.End_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.End_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aid_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aid_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonetaryDonation.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonetaryDonation.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoodsDonation.GoodsCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoodsDonation.GoodsCategory)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DisasterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
