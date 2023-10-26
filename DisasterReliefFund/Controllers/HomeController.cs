@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using DisasterReliefFund.Models;
+using System;
+using System.Configuration;
 using System.Web.Mvc;
+
+
+
 
 namespace DisasterReliefFund.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IConfiguration _configuration;
+
         public ActionResult Index()
         {
             return View();
@@ -19,12 +23,25 @@ namespace DisasterReliefFund.Controllers
 
             return View();
         }
-
+        [HttpGet]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            var model = new ContactViewModel();
+            return View(model);
+        }
 
-            return View();
+        [HttpPost]
+        public ActionResult Contact(ContactViewModel contact)
+        {
+            if (ModelState.IsValid)
+            {
+                // Handle the submitted contact data, e.g., send an email or save it to a database
+                // Redirect to a thank you page or display a success message
+            }
+
+            return View(contact);
         }
     }
 }
+
+

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DisasterReliefFund.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DisasterReliefFund.Models
@@ -110,3 +111,11 @@ namespace DisasterReliefFund.Models
         public string Email { get; set; }
     }
 }
+
+
+public class ContactViewModel
+{
+    public Contact Contact { get; set; }
+}
+
+

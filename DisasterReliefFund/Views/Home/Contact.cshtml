@@ -1,17 +1,70 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@Model YourNamespace.ViewModels.ContactViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Mudzanani Attorneys</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<body>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+    <div id="contact" class="container my-5">
+        <div class="row">
+            <div class="col text-center p-2">
+                <section class="location">
+                    <iframe src="https://maps.google.com/maps?q=246%20Paul%20kruger%20protea%20towers&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </section>
+            </div>
+            <div class="col">
+                <div id="form" class="container">
+                    <form action="">
+                        <div class="row my-4">
+                            <div class="col-md"><input type="text" placeholder="Name"></div>
+                            <div class="col-md"><input type="email" placeholder="Email" required></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md"><input type="tel" placeholder="Phone"></div>
+                            <div class="col-md"><input type="text" placeholder="Address"></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12"><input type="text" placeholder="Subject"></div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <textarea placeholder="Type your message here" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-md-12">
+                                <input id="home-submit" type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid p-3 text-center shadow-lg">
+        <h3>Helping Hands Foundation</h3>
+        <p>info@HHF.co.za</p>
+        <div class="container">
+            <a href="facebook.com"><img src="images/face_3.png" class="mx-2" width="50px" alt=""></a>
+            <a href="twitter.com"><img src="images/twitter_1.png" class="mx-2" style="transform: scale(0.8, 0.8);" width="50px" alt=""></a>
+            <a href="linkedin.co.za"><img src="images/in_1.png" class="mx-2" style="transform: scale(0.8, 0.8);" width="50px" alt=""></a>
+        </div>
+        <br>
+
+    </footer>
+
+</body>
+
+</html>
