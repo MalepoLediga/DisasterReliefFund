@@ -4,8 +4,8 @@
 
 <div class="jumbotron" style="color:orange;">
     <h1>Disaster Relief Foundation</h1>
-    <p   class="lead">As the Disaster Relief Foundation ,we aims to provide humanitarian assistance and support to communities and individuals affected by disasters, emergencies, and crises</p>
-    
+    <p class="lead">As the Disaster Relief Foundation ,we aims to provide humanitarian assistance and support to communities and individuals affected by disasters, emergencies, and crises</p>
+
 </div>
 
 
@@ -14,7 +14,7 @@
     <div class="col-md-4" style="background-color: mediumpurple;">
         <h2>GoodsDonation</h2>
         <p>
-            These are the ways in which we wish to contribute goods in our community , anyone is welcome to 
+            These are the ways in which we wish to contribute goods in our community , anyone is welcome to
             donate goods that they might not have a use for and would like to share a bit of kindness
             we accept all kinds of Goods from Clothing , non-perishable foods ..
         </p>
@@ -22,17 +22,74 @@
     </div>
     <div class="col-md-4">
         <h2>Money Donation</h2>
-        <p>Money Donations go a long way in assisting . it gives the foundation the power to go out and do more 
-           it allows us to really look into what we lack and get it for the people suffering these criseses 
-           we accept all amounts no amount is too small
+        <p>
+            Money Donations go a long way in assisting . it gives the foundation the power to go out and do more
+            it allows us to really look into what we lack and get it for the people suffering these criseses
+            we accept all amounts no amount is too small
         </p>
         <p><a class="btn btn-default" @Html.ActionLink("List of Amount Donated", "Index", "MonetaryDonations")> </a></p>
     </div>
     <div class="col-md-4" style="background-color: mediumpurple;">
         <h2>Disasters</h2>
-        <p>Our donations don't just reach out to the disasters that we are aware of , these can be even for the 
-           disasters that a donor might know of and want to record the disaster on our system so that they can
-           record these events for others to record'</p>
+        <p>
+            Our donations don't just reach out to the disasters that we are aware of , these can be even for the
+            disasters that a donor might know of and want to record the disaster on our system so that they can
+            record these events for others to record'
+        </p>
         <p><a class="btn btn-default" @Html.ActionLink("List of Disaster Occured", "Index", "Disasters")> </a></p>
     </div>
 </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Our Work</h2>
+        <p>This is the work we've done throughout the years</p>
+        
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="~/images/pic6.jpg" target="_blank">
+                        <img src="~/images/pic6.jpg" alt="Lights" style="width:100%">
+                        <div class="caption">
+                            <p>By applying a comprehensive vetting process that oversees the registration of prospective partners, we ensure that the humanitarian aid gets to where it needs to go.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="~/images/pic3.jpg" target="_blank">
+                        <img src="~/images/pic3.jpg" alt="Nature" style="width:100%">
+                        <div class="caption">
+                            <p>We deliver disaster aid to communities and nations affected by disaster situations irrespective of race, religion, culture, ethnicity or political affiliation..</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="~/images/pic1.jpg" target="_blank">
+                        <img src="~/images/pic1.jpg" alt="Fjords" style="width:100%">
+                        <div class="caption">
+                            <p>Organization registered in South Africa but serving the world. We respond to disaster situations by providing relief aid and disaster recovery. We respond to the immediate needs of people impacted by disasters from natural or artificial causes (political or social unrest) by engaging and leveraging our volunteers, partner organizations, and local church groups to help those in desperate need..</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

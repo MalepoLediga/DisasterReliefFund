@@ -218,6 +218,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\pic1.jpg" />
+    <Content Include="images\pic2.jpg" />
+    <Content Include="images\pic3.jpg" />
+    <Content Include="images\pic4.jpeg" />
+    <Content Include="images\pic5.jpg" />
+    <Content Include="images\pic6.jpg" />
     <Content Include="Models\Disaster.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Disaster.edmx</DependentUpon>
