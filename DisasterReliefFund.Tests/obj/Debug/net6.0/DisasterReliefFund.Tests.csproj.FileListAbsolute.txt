@@ -1,0 +1,4 @@
+C:\Users\Administrator\source\repos\DisasterReliefFund\DisasterReliefFund.Tests\obj\Debug\net6.0\DisasterReliefFund.Tests.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\DisasterReliefFund\DisasterReliefFund.Tests\obj\Debug\net6.0\DisasterReliefFund.Tests.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\DisasterReliefFund\DisasterReliefFund.Tests\obj\Debug\net6.0\DisasterReliefFund.Tests.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\DisasterReliefFund\DisasterReliefFund.Tests\obj\Debug\net6.0\DisasterReliefFund.Tests.csproj.CoreCompileInputs.cache
